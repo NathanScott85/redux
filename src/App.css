@@ -1,10 +1,18 @@
-.App {
+.counter {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+ 
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+span{
+  padding: 1rem;
+}
+
+.counter-container{
+  margin: 2rem;
 }
 
 @media (prefers-reduced-motion: no-preference) {
