@@ -1,11 +1,11 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { RootState } from '../store';
+import { AppDispatch, RootState } from '../store';
 import { decrement, increment } from './counterSlice';
 
 export function Counter() {
     const count = useSelector((state: RootState) => state.counter.value);
-    const dispatch = useDispatch();
+    const dispatch: AppDispatch = useDispatch(); // correct implementation of this? is there a need for an individual counter dispatch?
 
     return (
         <div>
