@@ -6,21 +6,29 @@ import { createSlice } from '@reduxjs/toolkit';
 
 export const counter = createSlice({
     name: 'counter',
-    initialState:  {
-        value: 0
+    initialState: {
+        value: 0,
     },
     reducers: {
-        increment: state => {
-            state.value += 1
+        increment: (state) => {
+            state.value += 1;
         },
-        decrement: state => {
-            state.value -= 1
+        decrement: (state) => {
+            state.value -= 1;
+        },
+        reset: (state) => {
+            state.value = 0;
         },
         incrementByAmount: (state: any, action: any) => {
-            state.value += action.payload
-        }
-    }
-})
-export const { increment, decrement, incrementByAmount } = counter.actions;
+            state.value += action.payload;
+        },
+    },
+});
+export const {
+    increment,
+    decrement,
+    incrementByAmount,
+    reset,
+} = counter.actions;
 
 export default counter.reducer;
